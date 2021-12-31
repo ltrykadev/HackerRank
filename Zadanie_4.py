@@ -13,9 +13,13 @@ while x < count:
 
 for number in number_list:
     if len(number) == 10:
-        match = re.search(r'^[789]', number)
-        if match:
-            print("YES")
+        match_first = re.search(r'^[789]', number)
+        if match_first:
+            match_second = re.search(r'[^0-9]', number)
+            if match_second:
+                print("NO")
+            else:
+                print("YES")
         else:
             print("NO")
     else:
