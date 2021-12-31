@@ -2,15 +2,21 @@ import re
 
 if __name__ == '__main__':
     count = int(input())
-    number = input()
 
-if len(number) == 10:
-    print("YES")
-else:
-    print("No")
+x = 0
+number_list = []
 
-match = re.search(r'^[789]', number)
-if match:
-    print("match!")
-else:
-    print("no match!")
+while x < count:
+    number_input = input()
+    number_list.append(number_input)
+    x += 1
+
+for number in number_list:
+    if len(number) == 10:
+        match = re.search(r'^[789]', number)
+        if match:
+            print("YES")
+        else:
+            print("NO")
+    else:
+        print("No")
