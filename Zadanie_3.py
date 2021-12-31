@@ -1,6 +1,5 @@
-def f(a):
-    a[0] = 2
+a = []
+a.append(2)
 
-a = [1]
-f(a)
-print(a)
+for x in a:
+    print(x)
